@@ -12,8 +12,11 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
+var ng2_bs3_modal_1 = require("ng2-bs3-modal/ng2-bs3-modal");
 var app_routing_1 = require("./app.routing");
 var home_component_1 = require("./Components/home.component");
+var user_component_1 = require("./Components/user.component");
+var user_service_1 = require("./Service/user.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,9 +24,9 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing],
-        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent],
-        providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }],
+        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, ng2_bs3_modal_1.Ng2Bs3ModalModule],
+        declarations: [app_component_1.AppComponent, user_component_1.UserComponent, home_component_1.HomeComponent],
+        providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -11,6 +11,9 @@
                             <ul class='nav navbar-nav'>
                                 <li><a [routerLink]="['home']">Home</a></li>
                             </ul>
+                            <ul class='nav navbar-nav'>
+                                <li><a [routerLink]="['user']">Users</a></li>
+                            </ul>
                         </div>
                     </nav>
                 </div>
