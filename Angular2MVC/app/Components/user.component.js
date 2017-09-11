@@ -34,7 +34,7 @@ var UserComponent = (function () {
         var _this = this;
         this.indLoading = true;
         this._userService.get(global_1.Global.BASE_USER_ENDPOINT)
-            .subscribe(function (users) { _this.users; _this.indLoading = false; }, function (error) { return _this.msg = error; });
+            .subscribe(function (users) { _this.users = users; _this.indLoading = false; }, function (error) { return _this.msg = error; });
     };
     UserComponent.prototype.addUser = function () {
         this.dbops = enum_1.DBOperation.create;
