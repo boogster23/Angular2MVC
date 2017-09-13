@@ -254,6 +254,7 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\filter\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
