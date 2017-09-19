@@ -210,6 +210,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\cross.png" />
     <Content Include="images\users.png" />
     <Content Include="images\vs2015.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -284,6 +285,7 @@
     <TypeScriptCompile Include="app\Models\user.ts" />
     <TypeScriptCompile Include="app\Service\user.service.ts" />
     <TypeScriptCompile Include="app\shared\enum.ts" />
+    <TypeScriptCompile Include="app\shared\errorhandler.ts" />
     <TypeScriptCompile Include="app\shared\global.ts" />
     <TypeScriptCompile Include="app\shared\search.component.ts" />
   </ItemGroup>

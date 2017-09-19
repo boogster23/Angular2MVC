@@ -21,9 +21,9 @@ var UserService = (function () {
     }
     UserService.prototype.get = function (url) {
         return this._http.get(url)
-            .map(function (response) { return response.json(); })
-            .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
-            .catch(this.handleError);
+            .map(function (response) { return response.json(); });
+        //.do(data => console.log("All: " + JSON.stringify(data)))
+        //.catch(this.handleError);
     };
     UserService.prototype.post = function (url, model) {
         var body = JSON.stringify(model);

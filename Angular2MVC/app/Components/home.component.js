@@ -14,7 +14,7 @@ var HomeComponent = (function () {
 }());
 HomeComponent = __decorate([
     core_1.Component({
-        template: "<img src=\"../../images/vs2015.png\" style=\"text-align:center\">"
+        template: "<img src=\"../../images/vs2015.png\" style=\"text-align:center\">\n               <button class=\"btn btn-primary\" (click)=\"IdontExist()\">ErrorButton</button>"
     })
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;

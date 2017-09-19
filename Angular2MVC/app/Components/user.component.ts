@@ -21,6 +21,7 @@ export class UserComponent implements OnInit {
     dbops: DBOperation;
     modalTitle: string;
     modalBtnTitle: string;
+    listFilter: string;
 
     constructor(private fb: FormBuilder, private _userService: UserService) { }
 
@@ -39,7 +40,8 @@ export class UserComponent implements OnInit {
         this.indLoading = true;
         this._userService.get(Global.BASE_USER_ENDPOINT)
             .subscribe(users => { this.users = users; this.indLoading = false; },
-                                error => this.msg = <any>error);
+            //error => this.msg = <any>error
+            );
     }
 
     addUser() {
@@ -140,6 +142,12 @@ export class UserComponent implements OnInit {
                 break;
         }
 
+    }
+
+    criteriaChange(value: string): void {
+        if (value != '[object Event]') {
+            this.listFilter = value;
+        }
     }
 }
 

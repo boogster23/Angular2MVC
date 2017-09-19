@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <input class="input-lg" placeholder="Enter any text to filter" (paste)="getPasteData($event)"
                      (keyup)="getEachChar($event.target.value)" type="text" [(ngModel)]="listFilter" />
-                    <img src="../../images/cross.png" class="cross-btn" (click)="clearFilter()" *ngIf="listFilter">
+                    <img src="../../images/cross.png" height="40px" class="cross-btn" (click)="clearFilter()" *ngIf="listFilter">
                 </div>
             </div>
             <div class="form-group">            
@@ -39,7 +39,7 @@ export class SearchComponent {
     }
 
     getPasteData(value: any) {
-        let pasteVal = value.clipboardData.getData('text/pain');
+        let pastedVal = value.clipboardData.getData('text/plain');
         this.change.emit(pastedVal);
         value.preventDefault();
     }

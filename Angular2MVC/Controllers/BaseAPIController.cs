@@ -20,5 +20,12 @@ namespace Angular2MVC.Controllers
             response.Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
             return response;
         }
+
+        protected HttpResponseMessage ErrorJson(dynamic obj)
+        {
+            var response = Request.CreateResponse(HttpStatusCode.Unauthorized);
+            response.Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+            return response;
+        }
     }
 }

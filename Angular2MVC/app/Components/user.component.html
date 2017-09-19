@@ -5,6 +5,9 @@
     <div class="panel-body">
         <div class="table-responsive">
             <div style="padding-bottom: 10px">
+                <div>
+                    <search-list [title]="searchTitle" (change)="criteriaChange($event)"></search-list>
+                </div>
                 <button class="btn btn-primary" (click)="addUser()">Add</button>
             </div>
             <div class="alert alert-info" role="alert" *ngIf="indLoading">
@@ -23,7 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let user of users">
+                    <tr *ngFor="let user of users | userFilter:listFilter">
                         <td>{{user.FirstName}}</td>
                         <td>{{user.LastName}}</td>
                         <td>{{user.Gender}}</td>
